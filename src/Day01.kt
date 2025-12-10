@@ -1,5 +1,3 @@
-import kotlin.math.floor
-
 fun main() {
 
     data class DirectionAmount(
@@ -59,7 +57,7 @@ fun main() {
         for(i in input) {
             val actionToTake = separateDirectionAndAmount(i)
 
-            password += noOfRotations(currentPoint, actionToTake, )
+            password += noOfRotations(currentPoint, actionToTake)
 
             currentPoint = if (actionToTake.dir == Direction.L) {
                 (currentPoint - actionToTake.amount).mod(100)
